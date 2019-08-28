@@ -1,0 +1,24 @@
+{
+    "name": "codenrx/maintaince",
+    "description": "This Laravel package makes it possible for you to set your website in \"Under Construction\" and \"Under Maintaince\"  mode",
+    "type": "library",
+    "license": "MIT",
+    "authors": [{
+        "name": "Istiaq Ahmmed  Nirab",
+        "email": "istiaqanirab202@gmail.com"
+    }],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "codenrx\\maintaince\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "codenrx\\maintaince\\maintainceServiceProvider"
+            ]
+        }
+    }
+}
