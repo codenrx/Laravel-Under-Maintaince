@@ -54,6 +54,7 @@ class maintainceCommand extends Command
                 $envContent .= "\n" . $this->newLine($hash) . "\n";
             }
             $this->filesystem->put($envPath, $envContent);
+            echo "Maintaince Mode Disabled";
         } else if ($type == 'underconstruction') {
             $hash = 'on';
             $envPath = $this->laravel->environmentFilePath();
@@ -73,6 +74,7 @@ class maintainceCommand extends Command
                 $envContent .= "\n" . "MAINTAINCE_TYPE=underconstruction" . "\n";
             }
             $this->filesystem->put($envPath, $envContent);
+            echo "Maintaince Mode Enabled ( underconstruction )";
         } else if ($type == 'on') {
             $hash = 'on';
             $envPath = $this->laravel->environmentFilePath();
@@ -92,6 +94,7 @@ class maintainceCommand extends Command
                 $envContent .= "\n" . "MAINTAINCE_TYPE=maintaince" . "\n";
             }
             $this->filesystem->put($envPath, $envContent);
+            echo "Maintaince Mode Enabled ( maintaince )";
         }
     }
 
